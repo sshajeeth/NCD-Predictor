@@ -57,7 +57,34 @@ public class Home extends AppCompatActivity {
             }
         }, SPLASH_TIME_OUT);
     }
+    public void profile(View view) {
+        int SPLASH_TIME_OUT = 2000;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(Home.this, profile.class);
 
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
+
+    }
+    public void generateReport(View view) {
+        int SPLASH_TIME_OUT = 2000;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(Home.this, barChart.class);
+
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
+
+    }
     public void echannel(View view) {
         Intent viewIntent =
                 new Intent("android.intent.action.VIEW",

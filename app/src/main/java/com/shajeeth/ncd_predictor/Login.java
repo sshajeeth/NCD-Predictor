@@ -38,8 +38,6 @@ public class Login extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         mAuth = FirebaseAuth.getInstance();
-
-
     }
 
     public void login(View view) {
@@ -56,7 +54,6 @@ public class Login extends AppCompatActivity {
                             // signed in user can be handled in the listener.
                         if(task.isSuccessful()) {
                             int SPLASH_TIME_OUT = 2500;
-                            FirebaseUser user = mAuth.getCurrentUser();
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
@@ -67,7 +64,6 @@ public class Login extends AppCompatActivity {
                                 }
                             }, SPLASH_TIME_OUT);
                             System.out.println("Login_Success");
-                            System.out.println("USER:" + user );
                         }else {
                             Toast.makeText(Login.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -29,16 +30,16 @@ public class CheckHipWaistRatio extends AppCompatActivity {
         waist = findViewById(R.id.waist);
         ratio = findViewById(R.id.ratio);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+        date = new SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(new Date());
 
     }
 
     public void find_hip_waist_ratio(View view) {
         double ratio_amount = Double.parseDouble(waist.getText().toString())/Double.parseDouble(hip.getText().toString());
-
-        mDatabase.child("ss").child(date).child("hip").setValue(Double.parseDouble(hip.getText().toString()));
-        mDatabase.child("ss").child(date).child("waist").setValue(Double.parseDouble(waist.getText().toString()));
-        mDatabase.child("ss").child(date).child("hwRatio").setValue(ratio_amount);
+        String currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        mDatabase.child(currentUser).child(date).child("hip").setValue(Double.parseDouble(hip.getText().toString()));
+        mDatabase.child(currentUser).child(date).child("waist").setValue(Double.parseDouble(waist.getText().toString()));
+        mDatabase.child(currentUser).child(date).child("hwRatio").setValue(ratio_amount);
         if (ratio_amount<=0.95){
             ratio.setText("Low Health Risk" + ratio_amount);
         }else if (ratio_amount>=0.96 && ratio_amount<1.0){
