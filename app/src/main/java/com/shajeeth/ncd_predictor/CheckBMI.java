@@ -14,7 +14,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class CheckBMI extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
     Spinner units;
     EditText weight;
     EditText height;
@@ -22,17 +32,20 @@ public class CheckBMI extends AppCompatActivity implements AdapterView.OnItemSel
     Button predict_ncd;
     String opt;
     double bmi_;
+    String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_bmi);
+        date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         units = findViewById(R.id.unit);
         weight = findViewById(R.id.weight);
         height = findViewById(R.id.height);
         bmi = findViewById(R.id.bmi);
         predict_ncd = findViewById(R.id.predict_ncd);
-
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.units, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         units.setAdapter(adapter);
@@ -64,6 +77,10 @@ public class CheckBMI extends AppCompatActivity implements AdapterView.OnItemSel
 
     public void calculate_bmi(View view) {
         bmi_ = find_bmi(Double.parseDouble(height.getText().toString()), Double.parseDouble(weight.getText().toString()));
+//        System.out.println(date);
+        mDatabase.child("ss").child(date).child("height").setValue(Double.parseDouble(height.getText().toString()));
+        mDatabase.child("ss").child(date).child("weight").setValue(Double.parseDouble(weight.getText().toString()));
+        mDatabase.child("ss").child(date).child("bmi").setValue(bmi_);
         if (opt.equals("Kg/m²")) {
             bmi.setText("Your BMI is " + bmi_ + "Kg/m²");
         }else if (opt.equals("lbs/in²")){

@@ -46,7 +46,6 @@ public class Login extends AppCompatActivity {
         if (email.getText().toString().equals("") || password.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Please fill all fields!",
                     Toast.LENGTH_LONG).show();
-
         }else{
             mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                     .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
@@ -55,29 +54,30 @@ public class Login extends AppCompatActivity {
                             // If sign in fails, display a message to the user. If sign in succeeds
                             // the auth state listener will be notified and logic to handle the
                             // signed in user can be handled in the listener.
-
-
-                                int SPLASH_TIME_OUT = 2500;
-                                new Handler().postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        Intent intent = new Intent(Login.this, Home.class);
-
-                                        startActivity(intent);
-                                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                                        finish();
-                                    }
-                                }, SPLASH_TIME_OUT);
-
+                        if(task.isSuccessful()) {
+                            int SPLASH_TIME_OUT = 2500;
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Intent intent = new Intent(Login.this, Home.class);
+                                    startActivity(intent);
+                                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                                    finish();
+                                }
+                            }, SPLASH_TIME_OUT);
+                            System.out.println("Login_Success");
+                            System.out.println("USER:" + user );
+                        }else {
+                            Toast.makeText(Login.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            System.out.println("Login_Fail");
+                        }
 
                         }
                     });
         }
         }
-
-
-
-
 
     public void signup_page(View view) {
         int SPLASH_TIME_OUT = 2500;

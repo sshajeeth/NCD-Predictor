@@ -64,8 +64,6 @@ public class Preference_Selection extends AppCompatActivity {
         gender_string = gender_.getText().toString();
         age_string = age.getText().toString();
 
-
-
         mAuth.createUserWithEmailAndPassword(email, password1)
                 .addOnCompleteListener(Preference_Selection.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -79,8 +77,8 @@ public class Preference_Selection extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             User user = new User(fname, lname, email, password1, gender_string, age_string);
-
-                            mDatabase.child(fname).setValue(user);
+                            String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            mDatabase.child(currentuser).setValue(user);
                             int SPLASH_TIME_OUT = 2500;
                             new Handler().postDelayed(new Runnable() {
                                 @Override
