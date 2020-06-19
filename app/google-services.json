@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "453067177588",
+    "firebase_url": "https://ncd-predictor.firebaseio.com",
+    "project_id": "ncd-predictor",
+    "storage_bucket": "ncd-predictor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453067177588:android:e9a813d249676a50d65b21",
+        "android_client_info": {
+          "package_name": "com.shajeeth.ncd_predictor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453067177588-9h8jrj5mqt1bmn87t1hcr44ej9q4a7uh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shajeeth.ncd_predictor",
+            "certificate_hash": "cf28c78af0e2c632152502bf6c61059849cfa7c7"
+          }
+        },
+        {
+          "client_id": "453067177588-4vgr22o9gfrurn1ef0nq3nilsfgr26ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcz85QyQkzQNq2vWtPr70s-p9AxWiQeD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453067177588-4vgr22o9gfrurn1ef0nq3nilsfgr26ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

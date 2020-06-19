@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NCD-Predictor</string>
+
+    <string-array name="units">
+        <item>Kg/m²</item>
+        <item>lbs/in²</item>
+    </string-array>
+</resources>
