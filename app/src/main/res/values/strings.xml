@@ -1,8 +1,45 @@
 <resources>
     <string name="app_name">NCD-Predictor</string>
+    <string name="draweropen" />
+    <string name="drawerclose" />
 
-    <string-array name="units">
+    <string-array name="bmi_units">
         <item>Kg/m²</item>
         <item>lbs/in²</item>
     </string-array>
+
+    <string-array name="whr_units">
+        <item>inches</item>
+        <item>cm</item>
+    </string-array>
+
+    <string name="underweight">
+        * Eat\n
+            \t\t1. Plenty of Proteins\n
+            \t\t2. Adequate amount of Carbs and Fat\n
+            \t\t3. Three meals per day (at least)\n
+            \t\t4. Take energy-dense foods and spices\n
+            \t\t\n
+        * Food Suggestions\n
+            \t\t1. Nuts (Almonds, Walnuts, Peanuts)\n
+            \t\t2. Dried Fruit (Raisins, Dates)\n
+            \t\t3. High-fat diary (Whole Milk, nonfat yoghurt)\n
+            \t\t4. Grains ( Oats, Brown rice)\n
+            \t\t5. Meat and Fish\n
+            \t\t6. Tubers (Potatoes, Sweet potatoes)\n
+            \t\t7. Dark chocolate\n
+            \t\t8. Avocados\n
+            \t\t9. Coconut Milk\n
+            \t\t10.Peanut butter
+    </string>
+
+    <string name="overweight">
+        * Eat\n
+            \t\t1. Less cholesterol and less fat products\n\t\t\t\t(canola Oil, Olive Oil),
+                    Also avoid less saturated \n\t\t\t\tand less trans-fat products.\n
+            \t\t2. More fruits, Vegetables.\n
+            \t\t3. Whole grains. Also avoid foods that high in \n\t\t\t\tsugar like pastries, soda and flavored drinks.\n
+            \t\t4. Non-fat dairy products.\n
+            \t\t5. Eating 5 smaller meals than eating 3 larger ones.
+    </string>
 </resources>

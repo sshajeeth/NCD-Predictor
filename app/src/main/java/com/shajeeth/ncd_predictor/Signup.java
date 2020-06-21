@@ -32,6 +32,8 @@ public class Signup extends AppCompatActivity {
     }
 
 
+
+
     public void signup(View view) {
         if (fname.getText().toString().equals("") || lname.getText().toString().equals("") || email.getText().toString().equals("") || password1.getText().toString().equals("") || password2.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Please fill all fields!",
@@ -40,7 +42,7 @@ public class Signup extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Passwords are not match!",
                     Toast.LENGTH_LONG).show();
         }else if (Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
-            int SPLASH_TIME_OUT = 2500;
+            int SPLASH_TIME_OUT = 1000;
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {

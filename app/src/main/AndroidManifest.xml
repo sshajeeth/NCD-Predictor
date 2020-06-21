@@ -3,31 +3,36 @@
     package="com.shajeeth.ncd_predictor">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name = "android.permission.VIBRATE" />
+    <uses-permission android:name = "android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NCD"></activity>
-        <activity android:name=".CheckHipWaistRatio" />
-        <activity android:name=".CheckBMI" />
-        <activity android:name=".Preference_Selection" />
+        <activity android:name=".Menu"></activity>
+        <activity android:name=".Monthly_Report" />
+        <activity android:name=".NCD_Page" />
+        <activity android:name=".Profile" />
         <activity android:name=".Home" />
+        <activity android:name=".Forgot_Password" />
+        <activity android:name=".Preference_Selection" />
         <activity android:name=".Signup" />
-        <activity android:name=".Login" />
-        <activity android:name=".barChart" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".NotifyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>

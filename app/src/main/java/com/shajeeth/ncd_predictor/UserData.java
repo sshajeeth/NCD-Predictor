@@ -1,17 +1,23 @@
 package com.shajeeth.ncd_predictor;
 
-import android.icu.text.DateFormat;
 
 public class UserData {
-    private DateFormat dateFormat;
-    private double height, weight, hip, waist, bmi, hwRatio;
 
-    public DateFormat getDateFormat() {
-        return dateFormat;
+    private double height, weight, hip, waist, bmi, hwRatio;
+    private String month;
+
+    public UserData() {
     }
 
-    public void setDateFormat(DateFormat dateFormat) {
-        this.dateFormat = dateFormat;
+    public UserData(double bmi, String month) {
+        this.bmi = bmi;
+        this.month = month;
+    }
+
+    public UserData(double bmi, double hwRatio, String month) {
+        this.bmi = bmi;
+        this.hwRatio = hwRatio;
+        this.month = month;
     }
 
     public double getHeight() {
@@ -60,5 +66,13 @@ public class UserData {
 
     public void setHwRatio(double hwRatio) {
         this.hwRatio = hwRatio;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
     }
 }

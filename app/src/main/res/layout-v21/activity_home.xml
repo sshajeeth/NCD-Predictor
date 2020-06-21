@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Home"
+    tools:openDrawer="end">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+        <GridLayout
+            android:id="@+id/mainGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="8"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:padding="14dp"
+            android:rowCount="3">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_rowWeight="0"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="347dp"
+                    android:layout_height="236dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="BMI"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:onClick="bmi_popup"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/info"/>
+                </LinearLayout>
+                    <Spinner
+                        android:id="@+id/bmi_units"
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/spinner" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Weight"
+                            android:textColor="@color/textBoxBorderColor" />
+
+                        <SeekBar
+                            android:id="@+id/bmi_weight"
+                            android:layout_width="150dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            android:maxWidth="15dp"
+                            android:maxHeight="5dp"
+                            android:minWidth="15dp"
+                            android:minHeight="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar"
+                            android:thumb="@drawable/custom_thumb"></SeekBar>
+
+                        <TextView
+                            android:id="@+id/weight_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="0.0"
+                            android:textColor="@color/textBoxBorderColor" />
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Height"
+                        android:textColor="@color/textBoxBorderColor" />
+
+                    <SeekBar
+                        android:id="@+id/bmi_height"
+                        android:layout_width="150dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="25dp"
+                        android:maxWidth="15dp"
+                        android:maxHeight="5dp"
+                        android:minWidth="15dp"
+                        android:minHeight="15dp"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        android:thumb="@drawable/custom_thumb"></SeekBar>
+
+                    <TextView
+                        android:id="@+id/height_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="0.0"
+                        android:textColor="@color/textBoxBorderColor" />
+
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_rowWeight="0"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="347dp"
+                    android:layout_height="236dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Waist Hip Ratio"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:onClick="whr_popup"
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/info"/>
+                    </LinearLayout>
+                    <Spinner
+                        android:id="@+id/whr_units"
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/spinner" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Waist"
+                            android:textColor="@color/textBoxBorderColor" />
+
+                        <SeekBar
+                            android:id="@+id/waist"
+                            android:layout_width="150dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            android:maxWidth="15dp"
+                            android:maxHeight="5dp"
+                            android:minWidth="15dp"
+                            android:minHeight="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar"
+                            android:thumb="@drawable/custom_thumb"></SeekBar>
+
+                        <TextView
+                            android:id="@+id/waist_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="0.0"
+                            android:textColor="@color/textBoxBorderColor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Hip"
+                            android:textColor="@color/textBoxBorderColor" />
+
+                        <SeekBar
+                            android:id="@+id/hip"
+                            android:layout_width="150dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="25dp"
+                            android:maxWidth="15dp"
+                            android:maxHeight="5dp"
+                            android:minWidth="15dp"
+                            android:minHeight="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar"
+                            android:thumb="@drawable/custom_thumb"></SeekBar>
+
+                        <TextView
+                            android:id="@+id/hip_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="0.0"
+                            android:textColor="@color/textBoxBorderColor" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="347dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bmi_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:id="@+id/whr_result"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/possibilities"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_round"
+            android:layout_gravity="center"
+            android:text="Predict NCD"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/textBoxBorderColor"
+            android:onClick="predict_ncd"
+            android:layout_marginBottom="30dp"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

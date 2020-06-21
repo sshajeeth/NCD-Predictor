@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".Profile">
+
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="8"
+        android:alignmentMode="alignMargins"
+        android:columnCount="1"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="3">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Basic Details: "
+                    android:textColor="@color/buttonColor"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "First Name: "
+                    android:textColor="@color/textBoxBorderColor"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "Last Name: "
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/last_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "Age: "
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "Email: "
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/profile_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textBoxBorderColor"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Security Details"
+                android:textColor="@color/buttonColor"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/current_password"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:hint = " Current Password"
+                    android:background="@drawable/edit_round"
+                    android:textColor="@color/textBoxBorderColor"
+                    android:textColorHint="@color/textBoxBorderColor"
+                    android:drawableLeft="@drawable/passwordicon"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <EditText
+                    android:id="@+id/new_password1"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:hint = " New Password"
+                    android:background="@drawable/edit_round"
+                    android:textColor="@color/textBoxBorderColor"
+                    android:textColorHint="@color/textBoxBorderColor"
+                    android:drawableLeft="@drawable/passwordicon"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <EditText
+                    android:id="@+id/new_password2"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:hint = " Confirm New Password"
+                    android:background="@drawable/edit_round"
+                    android:textColor="@color/textBoxBorderColor"
+                    android:textColorHint="@color/textBoxBorderColor"
+                    android:drawableLeft="@drawable/passwordicon"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+                <Button
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_round"
+                    android:text="Change Password"
+                    android:textColor="@color/textBoxBorderColor"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:onClick="change_password"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Notify me"
+                android:textColor="@color/buttonColor"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"/>
+
+            <ToggleButton
+                android:id="@+id/notifications"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="15dp"
+                android:text="ToggleButton"
+                android:textOff="Off"
+                android:textOn="On"
+                android:checked="true"
+                android:textColor="@color/textBoxBorderColor"
+                android:background="@drawable/button_round"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+</LinearLayout>

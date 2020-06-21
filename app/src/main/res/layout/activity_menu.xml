@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_weight="8"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="2">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_rowWeight="0"
+        android:layout_columnWeight="0"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bmi"
+                android:onClick="home_page"
+                android:layout_marginLeft="3.5dp"
+                android:layout_marginTop="3.5dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="0"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/report"
+                    android:onClick="report"
+                    android:layout_marginLeft="3.5dp"
+                    android:layout_marginTop="3.5dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="0"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile"
+                    android:onClick="profile"
+                    android:layout_marginLeft="3.5dp"
+                    android:layout_marginTop="3.5dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="0"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logout"
+                    android:onClick="logout"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="3.5dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+</LinearLayout>
